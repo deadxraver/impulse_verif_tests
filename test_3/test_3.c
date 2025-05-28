@@ -24,8 +24,9 @@ int main(int argc, char* argv[])
                                 {"%s %f %d\n", "Item2", M_PI_4 / 0.0001, 0xBADC00DE},
                                 {"%s %f %d\n", "Item3", M_SQRT1_2, 44444} };
     while (i < (sizeof (z_array) / sizeof (struct z_info))) {
-       if (z_array[i].z_int != 0xBADC00DE)
+       if (z_array[i].z_int != 0xBADC00DE) {
           DEBUG_PRINT(z_array[i].z_fmt, z_array[i].z_name, z_array[i].z_float, z_array[i].z_int)
+       }
        i++;
     }
     return 0;
